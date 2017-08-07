@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog</title>
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Статьи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Фильмы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Рисунки</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Путешествия</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Эбаут</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <%= link_to 'Новая статья', new_post_path, class: 'btn btn-outline-primary pull-xs-right' %>
+            </nav>
+        </div>
+
+        <%= link_to 'Все статьи', posts_path %>
+
+        <%= link_to 'Новая статья', new_post_path %>
+
+        <%= yield %>
+    </body>
+</html>
